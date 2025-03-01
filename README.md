@@ -1,6 +1,6 @@
 # Streamlit LangChain Chatbot
 Streamlitによるチャットボットアプリ。
-LLMにはLangChainで、Ollamaに問い合わせます。
+LLMにはLangChainで問い合わせます。
 
 ![Streamlit LangChain Chatbot](images/streamlit-langchain-chatbot.png)
 
@@ -32,6 +32,8 @@ ollama pull lucas2024/gemma-2-2b-jpn-it:q8_0
 ```
 ※大規模言語モデルは、自由に選べ、他のものでもいい。
 
+※Ollamaの代わりに[LM Studio](https://lmstudio.ai/)も利用できる。その場合、LM Studioでサーバーを走らせ、app.pyの中を `BASE_URL = "http://localhost:1234/v1"` などに変更する。
+
 ## 実行
 最初に、プログラムを展開したフォルダに入る。
 次に仮想環境に入っていない場合(コマンドプロンプトに(venv)と表示されていないとき)、仮想環境に入る。
@@ -43,6 +45,7 @@ Ollamaが起動していないかもしれないので、仮想環境に入っ�
 ```
 ollama list
 ```
+※Ollamaの代わりにLM Studioを使っている場合は不要
 
 仮想環境に入っている状態で、以下のコマンドでアプリを起動する。
 ```
