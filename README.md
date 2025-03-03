@@ -7,7 +7,7 @@ LLMにはLangChainで問い合わせます。
 ## 使用したもの
 * [Streamlit](https://streamlit.io/)
 * [LangChain](https://www.langchain.com/)
-* [Ollama](https://ollama.com/)
+* [Ollama](https://ollama.com/)か[LM Studio](https://lmstudio.ai/)
 
 ## インストール
 ```
@@ -32,7 +32,9 @@ ollama pull lucas2024/gemma-2-2b-jpn-it:q8_0
 ```
 ※大規模言語モデルは、自由に選べ、他のものでもいい。
 
-※Ollamaの代わりに[LM Studio](https://lmstudio.ai/)も利用できる。その場合、LM Studioでサーバーを走らせ、app.pyの中を `BASE_URL = "http://localhost:1234/v1"` などに変更する。
+※Ollamaの代わりに[LM Studio](https://lmstudio.ai/)も利用できる。その場合、「alfredplpl/gemma-2-2b-jpn-it」などのモデルをダウンロードする。LM Studioで、サーバーを走らせるには、左の「開発者」を選び、「Status」のトグルスイッチを切り替え「Running」にし、「Settings」で「ローカルネットワークでサービング」をオンにする。そして、app.pyの中の「BASE_URL」を `"http://localhost:1234/v1"`に変更する。右の「This model's API identifier」の値を「MODEL」に指定する。
+
+※Windowsで、WSLからLM Studioに接続するには、ローカルネットワークでサービングをオンにし、右の「The local server is reachable at this address」のIPアドレスを `localhost` の代わりに指定する。
 
 ## 実行
 最初に、プログラムを展開したフォルダに入る。
